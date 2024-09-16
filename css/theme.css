@@ -1,0 +1,242 @@
+/* Font */
+@font-face {
+  font-family: "Lexend";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/lexend-deca-v21-latin-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/lexend-deca-v21-latin-600.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PlexMono";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/IBMPlexMono-Text.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Variables */
+:root {
+  --font-mono: "PlexMono", Consolas, Monaco, 'Andale Mono', monospace;
+  --font-sans: "Lexend", 'Helvetica Neue', Helvetica, Segoe UI, sans-serif;
+  --primary: #003B8E;
+  --secondary: #003B8E;
+  --tertiary: #0055CC;
+  --text: #333332;
+  --tint: #687483;
+  --accent: #FFE615;
+  --background: #F7F9FC;
+}
+
+/* Global */
+.slide {
+  color-scheme: dark;
+  background-color: var(--background);
+
+  h1 {
+    position: relative;
+    margin-right: auto;
+    color: var(--secondary);
+  }
+
+  h1:after {
+    content: "";
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+    width: 10rem;
+    height: .5rem;
+    border-radius: .5rem;
+    background-color: var(--accent);
+  }
+
+  h2 {
+    color: var(--text);
+    font-size: 120%;
+  }
+}
+
+.slide--intro {
+  justify-content: center;
+  
+  h1,
+  h2 {
+    margin: 0;
+  }
+
+  h1 {
+    display: inline-block;
+    margin-right: auto;
+    letter-spacing: -.04em;
+    font-size: 100%;
+    font-size: 400%;
+    line-height: 1;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    max-width: 80vw;
+  }
+
+  h2 {
+    max-width: 60ch;
+    font-size: 200%;
+    color: var(--text);
+    font-weight: 300;
+    margin-bottom: 5rem;
+  }
+
+  h1 + * {
+    margin-top: 5rem;
+  }
+}
+
+.slide--overview {
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    position: relative;
+    display: inline-block;
+    border-radius: .5rem;
+    margin-right: initial;
+  }
+
+  h1:after {
+    left: 50%;
+    width: 5rem;
+    transform: translateX(-50%);
+  }
+}
+
+.slide__footer {
+  position: fixed;
+  width: calc(100% - 5rem);
+  left: 2.5rem;
+  bottom: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2rem;
+
+  @media (max-width: 1024px) {
+    width: calc(100% - 2rem);
+    left: 1rem;
+    bottom: 1rem;
+  }
+}
+
+.attribution {
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: var(--tint);
+  text-align: right;
+
+  > a {
+    color: inherit;
+  }
+}
+
+.logo {
+  --width: 198px;
+  --height: 51px;
+
+  width: var(--width);
+  height: var(--height);
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    --width: calc(198px * .7);
+    --height: calc(51px * .7);
+  }
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: screen;
+  opacity: .25;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Tables */
+.slide > table {
+  caption {
+    letter-spacing: -.05em;
+    color: var(--color-orange);
+  }
+
+  thead th {
+    background: var(--color-accent-1);
+  }
+
+  tbody tr > * {
+    border-top-color: hsla(0 0% 100% / 15%);
+  }
+
+  td:first-child {
+    font-weight: 300;
+  }
+}
+
+.slide figure {
+  figcaption {
+    margin-top: .5em;
+    text-align: center;
+  }
+}
+
+/**
+ * Styles for the sample talk, you don’t need to copy this to use Inspire.js
+ * If you just want the theme of the sample talk, use theme.css
+ */
+
+
+
+#media-plugin {
+  flex-flow: row;
+  padding: 2rem;
+}
+
+  #media-plugin > div:first-child {
+    margin-right: 1em;
+  }
+
+  #media-plugin h1 {
+    font-size: 200%;
+  }
+
+  #media-plugin .annotation {
+    font-weight: 300;
+  }
+
+details.notes.top-right {
+  right: 5rem !important;
+}
+details.notes.top-right[open]::before {
+  top: calc(1.6em) !important;
+}
+
+details.notes > div {
+  text-shadow: initial !important;
+}
