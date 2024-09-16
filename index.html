@@ -29,38 +29,58 @@
     <h1>Analysis/requirements</h1>
 
     <ul>
-      <li>...</li>
+      <li>Challenge 1: simplify data input</li>
+      <ul>
+        <li>Use 'verenigingsloket' to manage submission and status updates</li>
+        <li>Create 1 form (researched IPDC but data is not sufficiant at this time, opportunity for further development)</li>
+        <li>Cities to apply to based on the route (manual or via GPX)</li>
+      </ul>
+      <li>
+        Challenge 2: simplify approval
+      </li>
+      <ul>
+        <li>Notifications in Gelinkt Notuleren</li>
+        <li>Prefilled agendapoints based on data input</li>
+        <li>Option to send request to AWV (necessary for city of arrival)</li>
+      </ul>
+      <li>
+        Challenge 3: publication -> Use GN publication platform
+      </li>
     </ul>
   </article>
   <article class="slide">
-    <h1>UX Flow</h1>
+    <h1>Flow: organisation</h1>
 
-    <ul>
-      <li>...</li>
-    </ul>
+    <img src="/assets/organisation.png" alt="">
   </article>
-  <article class="slide"></article>
+  <article class="slide">
+    <h1>Flow: municipality</h1>
+
+    <img src="/assets/municipality.png" alt="">
+  </article>
+  <article class="slide">
     <h1>Progress</h1>
 
     <ul>
-      <li>...</li>
+      <li><a href="https://verenigingsloket-demo.netlify.app/dashboard">Started mockup verenigingsloket + form design</a></li>
+      <li>Start building GN environment</li>
+      <ul>
+        <li>Check for new submissions (sparql for now > future upgrade to LDES)</li>
+        <li>Interface for submissions and forward to AWV</li>
+      </ul>
+      <li>Created triples</li>
     </ul>
   </article>
-  <article class="slide"></article>
+  <article class="slide">
     <h1>What did we learn</h1>
 
     <ul>
-      <li>...</li>
+      <li>IPDC/LPDC: data is not available or not meaningful</li>
+      <li>GN plugin exploration: to complex -> switched to prefilled agendapoints</li>
+      <li>GPX parsing is a challenge, not a priority for now</li>
     </ul>
   </article>
 </section>
-
-<footer class="slide" title="The End">
-  <h1>Recap:</h1>
-  <ul>
-    <li><a href="https://verenigingsloket-demo.netlify.app/dashboard">Mockup verenigingsloket</a></li>
-  </ul>
-</footer>
 
 <script src="https://inspirejs.org/inspire.mjs" type="module"></script>
 
